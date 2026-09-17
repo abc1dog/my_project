@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="1학년 개발자의 개인 포트폴리오 웹사이트" />
+  <title>My Portfolio</title>
+  <!-- Inter — NVIDIA-EMEA 오픈소스 대체 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ──────────────────────────────────────────
+       UTILITY BAR (상단 32px 유틸리티 바)
+  ────────────────────────────────────────── -->
+  <div class="utility-bar" role="complementary" aria-label="유틸리티 바">
+    <div class="container utility-bar__inner">
+      <span>개인 포트폴리오</span>
+      <span>© 2026 주성우</span>
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────────────────
+       PRIMARY NAV (64px 검정 헤더)
+  ────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="홈으로 이동">
+        <span class="logo__bracket">&lt;</span>Dev<span class="logo__green">/</span>&gt;
+      </a>
+
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="main-nav">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="주요 메뉴">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#add_menu">추가메뉴1</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary header-cta" aria-label="연락하기">GET IN TOUCH</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ──────────────────────────────────────────
+         HERO (검정 캔버스)
+    ────────────────────────────────────────── -->
+    <section class="hero" aria-label="히어로 섹션">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="hero__eyebrow">DEVELOPER PORTFOLIO</p>
+          <h1 class="hero__title">
+            주성우<br />
+            <span class="hero__title--green">입니다</span>
+          </h1>
+          <p class="hero__sub">
+            HTML &amp; CSS로 세상을 만들어가는<br />
+            1학년 개발자
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+            <a href="#about" class="btn btn-outline-dark">더 알아보기</a>
+          </div>
+        </div>
+        <!-- 장식용 코드 블록 (우측) -->
+        <div class="hero__deco" aria-hidden="true">
+          <div class="code-block">
+            <span class="code-line"><span class="code-kw">const</span> developer = {</span>
+            <span class="code-line">&nbsp;&nbsp;name: <span class="code-str">'주성우'</span>,</span>
+            <span class="code-line">&nbsp;&nbsp;grade: <span class="code-num">1</span>,</span>
+            <span class="code-line">&nbsp;&nbsp;skills: [<span class="code-str">'HTML'</span>, <span class="code-str">'CSS'</span>],</span>
+            <span class="code-line">&nbsp;&nbsp;passion: <span class="code-str">'∞'</span></span>
+            <span class="code-line">};</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────
+         ABOUT (흰 캔버스)
+    ────────────────────────────────────────── -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section-eyebrow">WHO I AM</p>
+        <h2 id="about-title" class="section-title">ABOUT ME</h2>
+
+        <div class="about-grid">
+          <!-- 아바타 카드 -->
+          <div class="about-avatar" aria-hidden="true">
+            <div class="avatar-card">
+              <div class="corner-square corner-square--tl"></div>
+              <div class="avatar-emoji">👨‍💻</div>
+              <p class="avatar-label">Junior Developer</p>
+            </div>
+          </div>
+
+          <!-- 텍스트 -->
+          <div class="about-text">
+            <p>
+              안녕하세요! 저는 웹 개발에 막 첫 발을 내딛은 <strong>1학년 개발자</strong>입니다.
+              HTML과 CSS로 아름다운 웹 페이지를 만드는 것에 큰 흥미를 느끼고 있습니다.
+            </p>
+            <p>
+              코드 한 줄 한 줄이 눈에 보이는 결과로 나타날 때의 짜릿함으로
+              매일 성장하고 있습니다.
+            </p>
+
+            <ul class="skill-list" aria-label="보유 기술">
+              <li><span class="skill-badge">HTML5</span></li>
+              <li><span class="skill-badge">CSS3</span></li>
+              <li><span class="skill-badge">반응형 디자인</span></li>
+              <li><span class="skill-badge">웹 접근성</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 통계 카드 행 -->
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="corner-square corner-square--tl"></div>
+            <p class="stat-num">3+</p>
+            <p class="stat-label">프로젝트 완성</p>
+          </div>
+          <div class="stat-card">
+            <div class="corner-square corner-square--tl"></div>
+            <p class="stat-num">1년</p>
+            <p class="stat-label">개발 경력</p>
+          </div>
+          <div class="stat-card">
+            <div class="corner-square corner-square--tl"></div>
+            <p class="stat-num">100%</p>
+            <p class="stat-label">성장 의지</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────
+         CTA STRIP (검정 캔버스 — 중간 전환)
+    ────────────────────────────────────────── -->
+    <div class="cta-strip" aria-hidden="false">
+      <div class="container cta-strip__inner">
+        <h2 class="cta-strip__title">코드로 아이디어를 현실로</h2>
+        <a href="#projects" class="btn btn-primary">프로젝트 확인하기</a>
+      </div>
+    </div>
+
+    <!-- ──────────────────────────────────────────
+         PROJECTS (회색 소프트 캔버스)
+    ────────────────────────────────────────── -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section-eyebrow">WHAT I'VE BUILT</p>
+        <h2 id="projects-title" class="section-title">PROJECTS</h2>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="corner-square corner-square--tl"></div>
+            <div class="project-badge">WEB</div>
+            <div class="project-img" aria-hidden="true">🌐</div>
+            <div class="project-info">
+              <h3>포트폴리오 웹사이트</h3>
+              <p>HTML과 CSS만으로 반응형 개인 포트폴리오를 제작했습니다.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+              <a href="#" class="ghost-link">자세히 보기 →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="corner-square corner-square--tl"></div>
+            <div class="project-badge">ART</div>
+            <div class="project-img" aria-hidden="true">🎨</div>
+            <div class="project-info">
+              <h3>CSS 아트 갤러리</h3>
+              <p>순수 CSS만으로 다양한 도형과 일러스트를 표현한 갤러리입니다.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+              <a href="#" class="ghost-link">자세히 보기 →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="corner-square corner-square--tl"></div>
+            <div class="project-badge">UI</div>
+            <div class="project-img" aria-hidden="true">📋</div>
+            <div class="project-info">
+              <h3>반응형 랜딩 페이지</h3>
+              <p>Flexbox와 Grid를 활용해 다양한 기기에서 완벽히 작동하는 페이지입니다.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>Flexbox</span>
+              </div>
+              <a href="#" class="ghost-link">자세히 보기 →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────
+         CONTACT (흰 캔버스)
+    ────────────────────────────────────────── -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <p class="section-eyebrow">GET IN TOUCH</p>
+        <h2 id="contact-title" class="section-title">CONTACT</h2>
+        <p class="contact-desc">함께 멋진 것을 만들어 볼까요? 언제든지 연락해주세요!</p>
+
+        <form class="contact-form" novalidate aria-label="연락처 양식">
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" placeholder="홍길동" required />
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">메시지</label>
+            <textarea id="message" name="message" rows="5" placeholder="안녕하세요!" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">메시지 보내기</button>
+            <button type="reset" class="btn btn-outline">초기화</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────
+         추가 메뉴 (회색 소프트 캔버스)
+    ────────────────────────────────────────── -->
+    <section id="add_menu" class="section add-section" aria-labelledby="add-title">
+      <div class="container">
+        <p class="section-eyebrow">MORE</p>
+        <h2 id="add-title" class="section-title">추가 메뉴 내용</h2>
+        <p class="contact-desc">이 섹션에 원하는 내용을 추가할 수 있습니다.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ──────────────────────────────────────────
+       FOOTER (검정 캔버스)
+  ────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="홈으로 이동">
+          <span class="logo__bracket">&lt;</span>Dev<span class="logo__green">/</span>&gt;
+        </a>
+        <p class="footer-tagline">HTML &amp; CSS로 만든 포트폴리오</p>
+      </div>
+      <nav class="footer-nav" aria-label="푸터 내비게이션">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 주성우 · All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 햄버거 메뉴 토글 -->
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      btn.setAttribute('aria-label', expanded ? '메뉴 열기' : '메뉴 닫기');
+      nav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
